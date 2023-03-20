@@ -5,4 +5,4 @@ To setup the project, from the Vivado tcl command prompt without an active proje
  > source setup.tcl
 
 To test the JTAG-AXI connections do this from a tcl command prompt:
- > source jtag_axi.tcl
+ > source Scripts/jtag_axi.tcl
