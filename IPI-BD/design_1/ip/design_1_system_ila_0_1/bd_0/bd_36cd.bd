@@ -510,16 +510,16 @@
       }
     },
     "interface_nets": {
-      "Conn": {
-        "interface_ports": [
-          "SLOT_0_AXI",
-          "g_inst/slot_0_axi"
-        ]
-      },
       "TRIG_IN_1": {
         "interface_ports": [
           "TRIG_IN",
           "ila_lib/TRIG_IN"
+        ]
+      },
+      "Conn": {
+        "interface_ports": [
+          "SLOT_0_AXI",
+          "g_inst/slot_0_axi"
         ]
       },
       "ila_lib_TRIG_OUT": {

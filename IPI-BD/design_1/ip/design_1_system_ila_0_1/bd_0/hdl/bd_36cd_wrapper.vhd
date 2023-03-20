@@ -49,25 +49,25 @@ architecture STRUCTURE of bd_36cd_wrapper is
     TRIG_IN_trig : in STD_LOGIC_VECTOR ( 0 to 0 );
     TRIG_OUT_ack : in STD_LOGIC_VECTOR ( 0 to 0 );
     TRIG_OUT_trig : out STD_LOGIC_VECTOR ( 0 to 0 );
-    SLOT_0_AXI_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    SLOT_0_AXI_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    SLOT_0_AXI_awvalid : in STD_LOGIC;
-    SLOT_0_AXI_awready : in STD_LOGIC;
-    SLOT_0_AXI_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    SLOT_0_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    SLOT_0_AXI_wvalid : in STD_LOGIC;
-    SLOT_0_AXI_wready : in STD_LOGIC;
-    SLOT_0_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    SLOT_0_AXI_bvalid : in STD_LOGIC;
-    SLOT_0_AXI_bready : in STD_LOGIC;
     SLOT_0_AXI_araddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
     SLOT_0_AXI_arprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
-    SLOT_0_AXI_arvalid : in STD_LOGIC;
     SLOT_0_AXI_arready : in STD_LOGIC;
+    SLOT_0_AXI_arvalid : in STD_LOGIC;
+    SLOT_0_AXI_awaddr : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_0_AXI_awprot : in STD_LOGIC_VECTOR ( 2 downto 0 );
+    SLOT_0_AXI_awready : in STD_LOGIC;
+    SLOT_0_AXI_awvalid : in STD_LOGIC;
+    SLOT_0_AXI_bready : in STD_LOGIC;
+    SLOT_0_AXI_bresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    SLOT_0_AXI_bvalid : in STD_LOGIC;
     SLOT_0_AXI_rdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_0_AXI_rready : in STD_LOGIC;
     SLOT_0_AXI_rresp : in STD_LOGIC_VECTOR ( 1 downto 0 );
     SLOT_0_AXI_rvalid : in STD_LOGIC;
-    SLOT_0_AXI_rready : in STD_LOGIC
+    SLOT_0_AXI_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    SLOT_0_AXI_wready : in STD_LOGIC;
+    SLOT_0_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    SLOT_0_AXI_wvalid : in STD_LOGIC
   );
   end component bd_36cd;
 begin

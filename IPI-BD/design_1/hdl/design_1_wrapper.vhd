@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
---Date        : Sun Mar 19 16:05:56 2023
+--Date        : Sun Mar 19 17:39:38 2023
 --Host        : DSKDAC20332 running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -78,18 +78,29 @@ architecture STRUCTURE of design_1_wrapper is
     button_east : in STD_LOGIC;
     button_west : in STD_LOGIC;
     button_center : in STD_LOGIC;
-    iic_main_scl_i : in STD_LOGIC;
-    iic_main_scl_o : out STD_LOGIC;
-    iic_main_scl_t : out STD_LOGIC;
-    iic_main_sda_i : in STD_LOGIC;
-    iic_main_sda_o : out STD_LOGIC;
-    iic_main_sda_t : out STD_LOGIC;
+    ddr3_sdram_dq : inout STD_LOGIC_VECTOR ( 63 downto 0 );
+    ddr3_sdram_dqs_p : inout STD_LOGIC_VECTOR ( 7 downto 0 );
+    ddr3_sdram_dqs_n : inout STD_LOGIC_VECTOR ( 7 downto 0 );
+    ddr3_sdram_addr : out STD_LOGIC_VECTOR ( 13 downto 0 );
+    ddr3_sdram_ba : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    ddr3_sdram_ras_n : out STD_LOGIC;
+    ddr3_sdram_cas_n : out STD_LOGIC;
+    ddr3_sdram_we_n : out STD_LOGIC;
+    ddr3_sdram_reset_n : out STD_LOGIC;
+    ddr3_sdram_ck_p : out STD_LOGIC_VECTOR ( 0 to 0 );
+    ddr3_sdram_ck_n : out STD_LOGIC_VECTOR ( 0 to 0 );
+    ddr3_sdram_cke : out STD_LOGIC_VECTOR ( 0 to 0 );
+    ddr3_sdram_cs_n : out STD_LOGIC_VECTOR ( 0 to 0 );
+    ddr3_sdram_dm : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    ddr3_sdram_odt : out STD_LOGIC_VECTOR ( 0 to 0 );
+    rs232_uart_rxd : in STD_LOGIC;
+    rs232_uart_txd : out STD_LOGIC;
+    sys_diff_clock_clk_p : in STD_LOGIC;
+    sys_diff_clock_clk_n : in STD_LOGIC;
     mdio_mdc_mdc : out STD_LOGIC;
     mdio_mdc_mdio_i : in STD_LOGIC;
     mdio_mdc_mdio_o : out STD_LOGIC;
     mdio_mdc_mdio_t : out STD_LOGIC;
-    sys_diff_clock_clk_p : in STD_LOGIC;
-    sys_diff_clock_clk_n : in STD_LOGIC;
     mii_col : in STD_LOGIC;
     mii_crs : in STD_LOGIC;
     mii_rst_n : out STD_LOGIC;
@@ -109,24 +120,13 @@ architecture STRUCTURE of design_1_wrapper is
     spi_flash_ss_i : in STD_LOGIC;
     spi_flash_ss_o : out STD_LOGIC;
     spi_flash_ss_t : out STD_LOGIC;
-    lcd_7bits_tri_o : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    rs232_uart_rxd : in STD_LOGIC;
-    rs232_uart_txd : out STD_LOGIC;
-    ddr3_sdram_dq : inout STD_LOGIC_VECTOR ( 63 downto 0 );
-    ddr3_sdram_dqs_p : inout STD_LOGIC_VECTOR ( 7 downto 0 );
-    ddr3_sdram_dqs_n : inout STD_LOGIC_VECTOR ( 7 downto 0 );
-    ddr3_sdram_addr : out STD_LOGIC_VECTOR ( 13 downto 0 );
-    ddr3_sdram_ba : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    ddr3_sdram_ras_n : out STD_LOGIC;
-    ddr3_sdram_cas_n : out STD_LOGIC;
-    ddr3_sdram_we_n : out STD_LOGIC;
-    ddr3_sdram_reset_n : out STD_LOGIC;
-    ddr3_sdram_ck_p : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ddr3_sdram_ck_n : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ddr3_sdram_cke : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ddr3_sdram_cs_n : out STD_LOGIC_VECTOR ( 0 to 0 );
-    ddr3_sdram_dm : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    ddr3_sdram_odt : out STD_LOGIC_VECTOR ( 0 to 0 )
+    iic_main_scl_i : in STD_LOGIC;
+    iic_main_scl_o : out STD_LOGIC;
+    iic_main_scl_t : out STD_LOGIC;
+    iic_main_sda_i : in STD_LOGIC;
+    iic_main_sda_o : out STD_LOGIC;
+    iic_main_sda_t : out STD_LOGIC;
+    lcd_7bits_tri_o : out STD_LOGIC_VECTOR ( 6 downto 0 )
   );
   end component design_1;
   component IOBUF is

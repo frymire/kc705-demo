@@ -1,11 +1,11 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.1 (win64) Build 2902540 Wed May 27 19:54:49 MDT 2020
--- Date        : Sun Mar 19 16:08:32 2023
+-- Date        : Sun Mar 19 17:42:11 2023
 -- Host        : DSKDAC20332 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub -rename_top design_1_auto_ds_11 -prefix
---               design_1_auto_ds_11_ design_1_auto_ds_9_stub.vhdl
--- Design      : design_1_auto_ds_9
+-- Command     : write_vhdl -force -mode synth_stub
+--               d:/Vivado/kc705-demo/IPI-BD/design_1/ip/design_1_auto_ds_11/design_1_auto_ds_11_stub.vhdl
+-- Design      : design_1_auto_ds_11
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7k325tffg900-2
 -- --------------------------------------------------------------------------------
